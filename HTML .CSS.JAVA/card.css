@@ -1,0 +1,47 @@
+.card{
+  width: 300px;
+  height: 400px;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+
+}
+.card:hover{
+  transform: scale(.9);
+}
+
+.card:hover::after{
+  height: 280px;
+
+}
+
+.card:hover .con-text p{
+  margin-bottom: 8px;
+  opacity: 1;
+}
+ .card:hover img{
+  transform: scale(1.25);
+ }
+
+ .card:hover .ul{
+  opacity: 1;
+  transform:translate(0);
+
+ }
+ .card::after{
+  width: 100%;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  height: 150px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0,0,0,0)0%, rgba(0,0,0,1)100%);
+  z-index: 20;
+  transition: all .25s ease;
+ }
